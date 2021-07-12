@@ -1,0 +1,2609 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link rel = "icon" href = "logo2.jpg"   type = "image/x-icon">
+  <title>DAA Code-O-Mania</title>
+
+</head>
+
+<body>
+
+  <script>
+    const searchYoutubers = () => {
+      let filter = document.getElementById('myInput').value.toUpperCase();
+
+      let ul = document.getElementById('myUL');
+
+      let li = ul.getElementsByTagName('li');
+
+      for (var i = 0; i < li.length; i++) {
+        let a = li[i].getElementsByTagName('a')[0];
+
+        let textValue = a.textContent || a.innerHTML;
+
+        if (textValue.toLocaleUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = 'grid';
+        }
+        else {
+          li[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+
+
+
+  <!-- navbar -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img src="logo2.jpg" style="width: 50px; height: 50px;">
+      <a class="navbar-brand px-2" href="#">Code-O-Mania</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="dsa_codes.html">DSA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+
+         
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search Your Code Here...." id="myInput"
+          onkeyup="searchYoutubers()">
+          <div class="dropdown me-5">
+            <button class="btn btn-light dropdown-toggle me-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 10px;">
+            Search
+            </button>
+            <ul class="dropdown-menu" style="font-size: .8rem;" aria-labelledby="dropdownMenuButton1" id="myUL">
+              <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#binarysearchModal">Binary
+                search</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#quicksortModal">Quick sort</a>
+            </li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#mergesortModal">Merge sort</a>
+            </li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#maxminModal">Max and Min
+                number</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#matrixchainModal">Matrix chain
+                Multiplication</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#floyedwarshallModal">Floyed
+                Warshall</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#travelingModal">Travelling
+                Salesman </a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#puzzleModal">15 Puzzle
+                problem</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#jobsequenceModal">Job Sequence
+                Problem</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#graphcolouringModal">Graph
+                Colouring problem</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#nqueenModal">N Queen Problem</a>
+            </li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#dijsktraModal">
+              Dijsktra algorithm</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#knapsackModal">Knapsack
+                problem</a></li>
+        
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#primModal">
+                 Prim's algorithm</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#kruskalModal">Kruskal's
+                algorithm</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#bfsModal">BFS</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#dfsModal">DFS</a></li>
+            </ul>
+          </div>
+          
+          
+        
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+
+  <!-- slider -->
+  <div class="container my-1">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://source.unsplash.com/1600x700/?coding" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/1600x700/?laptop,technology" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/1600x700/?computer,devoloper" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- cards -->
+    <div class="container">
+      <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-5 fst-italic">Design and Analysis of Algorithms</h1>
+          <br>
+        </div>
+        <p class="lead  my-3 fst-italic"> Design and Analysis of Algorithm is very important for designing algorithm to
+          solve different types of problems in the branch of computer science and information technology.</p>
+
+
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center">
+      <div class="col ">
+        <div class="card h-100 border border-dark" data-search="divide and conquer" data-filter="divide and conquer">
+          <img src="divide and conquer.png" height="223" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Divide and Conquer</h5>
+            <p class="card-text fst-italic">Divide and Conquer algorithm consists of three steps. Divide the problem
+              into a set of subproblems. Conquer: Solve every subproblem individually, recursively. Combine: Put
+              together the solutions of the subproblems to get the whole solution</p>
+          </div>
+          <div class="card-footer border border-dark">
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Topics Covered
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#binarysearchModal">Binary
+                    search</a></li>
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#quicksortModal">Quick sort</a>
+                </li>
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#mergesortModal">Merge sort</a>
+                </li>
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#maxminModal">Max and Min
+                    number</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col ">
+        <div class="card h-100 border border-dark" data-search="dynamic programming">
+          <img src="dp1.jpg" height="223" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Dynamic Programming</h5>
+            <p class="card-text fst-italic">Dynamic Programming solves problems by combining the solutions of
+              subproblems. It solves each sub-problem just once and then saves its answer in a table, thereby avoiding
+              the work of re-computing the answer every time.
+            </p>
+          </div>
+          <div class="card-footer border border-dark">
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Topics Covered
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#matrixchainModal">Matrix chain
+                    Multiplication</a></li>
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#floyedwarshallModal">Floyed
+                    Warshall algorithm</a></li>
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#travelingModal">Travelling
+                    Salesman problem</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col ">
+        <div class="card h-100 border border-dark" data-search="branch and bound">
+          <img src="branch and bound1.jpeg" height="223" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Branch and Bound</h5>
+            <p class="card-text fst-italic">Branch and bound is an algorithm design paradigm which is generally used for
+              solving combinatorial optimization problems.It solves these problems relatively quickly.</p>
+          </div>
+          <div class="card-footer border border-dark">
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Topics Covered
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#puzzleModal">15 Puzzle
+                    problem</a></li>
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#jobsequenceModal">Job Sequence
+                    Problem</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 border border-dark" data-search="backtracking">
+          <img src="backtracking.jpg" height="223" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Backtracking </h5>
+            <p class="card-text fst-italic">Backtracking is an algorithmic-technique for solving problems recursively by
+              trying to build a solution incrementally, one piece at a time, removing those solutions that fail to
+              satisfy the constraints of the problem at any point of time </p>
+          </div>
+          <div class="card-footer border border-dark">
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Topics Covered
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#graphcolouringModal">Graph
+                    Colouring problem</a></li>
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#nqueenModal">N Queen Problem</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border border-dark" data-search="greedy">
+          <img src="greedy.png" height="223" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Greedy Method</h5>
+            <p class="card-text fst-italic">A greedy algorithm is a simple, intuitive algorithm that is used in
+              optimization problems. The algorithm makes the optimal choice at each step as it attempts to find the
+              overall optimal way to solve the entire problem.</p>
+          </div>
+          <div class="card-footer border border-dark">
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Topics Covered
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#dijsktraModal">Simple Source
+                    Shortest Path using Dijsktra algorithm</a></li>
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#knapsackModal">Knapsack
+                    problem</a></li>
+
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#primModal">Minimum Cost Spanning
+                    Tree using Prim's algorithm</a></li>
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#kruskalModal">Kruskal's
+                    algorithm</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border border-dark" data-search="graph">
+          <img src="graph.png" height="223" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Graph Traversal algorithm</h5>
+            <p class="card-text fst-italic">Graph traversal is a technique used for a searching vertex in a graph. The
+              graph traversal is also used to decide the order of vertices is visited in the search process. A graph
+              traversal finds the edges to be used in the search process without creating loops.</p>
+          </div>
+          <div class="card-footer border border-dark">
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Topics Covered
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#bfsModal">BFS</a></li>
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#dfsModal">DFS</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br>
+
+    <br>
+    <br>
+  </div>
+  <div id="binarysearchModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  BINARY_SEARCH(A, lower_bound, upper_bound, VAL)
+
+  Step 1: [INITIALIZE] SET BEG = lower_bound END = upper_bound, POS = - 1
+
+  Step 2: Repeat Steps 3 and 4 while BEG <=END
+
+  Step 3: SET MID = (BEG + END)/2
+
+  Step 4: IF A[MID] = VAL
+  SET POS = MID
+  PRINT POS
+
+  Go to Step 6
+
+  ELSE IF A[MID] > VAL
+  SET END = MID - 1
+  ELSE
+  SET BEG = MID + 1
+    [END OF IF]
+    [END OF LOOP]
+
+  Step 5: IF POS = -1
+  PRINT "VALUE IS NOT PRESENT IN THE ARRAY"
+  [END OF IF]
+
+  Step 6: EXIT
+          </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+#include&lt;stdio.h&gt
+int binarysearch(int arr[],int n,int key)
+{
+    int low=0,high=n-1,mid,flag=0,c=0;
+    while(low<=high)
+    {
+        mid=(high+low)/2;
+        c++;
+        if(key==arr[mid])
+        {
+        flag=1;
+        break;
+        }
+        else if(key< arr[mid])
+        high=mid-1;
+        else
+        low=mid+1;
+    }
+    if(flag==1)
+    printf("Key is found at %d\n",mid);
+    else
+    printf("Key is not found");
+
+    printf("No.of iterations %d",c);
+}
+void main()
+{
+    int arr[10],i,n,key;
+    printf("Enter no of elements: ");
+    scanf("%d",&n);
+    printf("Enter the array elements: ");
+    for(i=0;i< n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter the key: ");
+    scanf("%d",&key);
+    binarysearch(arr,n,key);
+}
+                    
+                            
+  </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+Best case time complexity = O(1)
+Average case time complexity = O(logn)
+Worst case time complexity = O(logn)
+</pre><br>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=V_T5NuccwRA" target="_blank">EXPLANATION</a>
+          <br>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="binaryoutput1.jpg" height="500" width="500" class="img-fluid" alt="test">
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="mergesortModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  MergeSort(arr[], l,  r)
+    If r > l
+       Find the middle point to divide the array into two halves:  
+              middle m = l+ (r-l)/2
+
+       Call mergeSort for first half:   
+              Call mergeSort(arr, l, m)
+
+       Call mergeSort for second half:
+              Call mergeSort(arr, m+1, r)
+
+       Merge the two halves sorted in step 2 and 3:
+              Call merge(arr, l, m, r)
+          </pre>
+          <br>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+#include&lt;stdio.h&gt
+void mergesort(int a[],int i,int j);
+void merge(int a[],int i1,int j1,int i2,int j2);
+
+int main()
+{
+    int a[30],n,i;
+    printf("Enter no of elements:");
+    scanf("%d",&n);
+    printf("Enter array elements:");
+
+    for(i=0;i< n;i++)
+        scanf("%d",&a[i]);
+
+    mergesort(a,0,n-1);
+
+    printf("\nSorted array is :");
+    for(i=0;i< n;i++)
+        printf("%d ",a[i]);
+
+    return 0;
+}
+
+void mergesort(int a[],int i,int j)
+{
+    int mid;
+
+    if(i< j)
+    {
+        mid=(i+j)/2;
+        mergesort(a,i,mid);		//left recursion
+        mergesort(a,mid+1,j);	//right recursion
+        merge(a,i,mid,mid+1,j);	//merging of two sorted sub-arrays
+    }
+}
+
+void merge(int a[],int i1,int j1,int i2,int j2)
+{
+    int temp[50];	//array used for merging
+    int i,j,k;
+    i=i1;	//beginning of the first list
+    j=i2;	//beginning of the second list
+    k=0;
+
+    while(i<=j1 && j<=j2)	//while elements in both lists
+    {
+        if(a[i]< a[j])
+            temp[k++]=a[i++];
+        else
+            temp[k++]=a[j++];
+    }
+
+    while(i<=j1)	//copy remaining elements of the first list
+        temp[k++]=a[i++];
+
+    while(j<=j2)	//copy remaining elements of the second list
+        temp[k++]=a[j++];
+
+    //Transfer elements from temp[] back to a[]
+    for(i=i1,j=0;i<=j2;i++,j++)
+        a[i]=temp[j];
+}                      
+  </pre>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+  Worst Case Complexity = O(n logn)
+  Best Case Complexity = O(n logn)
+  Average Case Complexity = O(n logn)
+</pre><br>
+
+          <br>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=jlHkDBEumP0" target="_blank">EXPLANATION</a>
+          <br>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="mergesort1.jpg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="quicksortModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  /* low  --> Starting index,  high  --> Ending index */
+  quickSort(arr[], low, high)
+  {
+      if (low < high)
+      {
+          /* pi is partitioning index, arr[pi] is now
+            at right place */
+          pi = partition(arr, low, high);
+
+          quickSort(arr, low, pi - 1);  // Before pi
+          quickSort(arr, pi + 1, high); // After pi
+      }
+  }
+          </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+#include&lt;stdio.h&gt
+void quicksort(int number[25],int first,int last){
+    int i, j, pivot, temp;
+
+    if(first< last){
+      pivot=first;
+      i=first;
+      j=last;
+
+      while(i< j){
+          while(number[i]<=number[pivot]&&i< last)
+            i++;
+          while(number[j]>number[pivot])
+            j--;
+          if(i< j){
+            temp=number[i];
+            number[i]=number[j];
+            number[j]=temp;
+          }
+      }
+
+      temp=number[pivot];
+      number[pivot]=number[j];
+      number[j]=temp;
+      quicksort(number,first,j-1);
+      quicksort(number,j+1,last);
+
+    }
+}
+
+int main(){
+    int i, count, number[25];
+
+    printf("How many elements are u going to enter?: ");
+    scanf("%d",&count);
+
+    printf("Enter %d elements: ", count);
+    for(i=0;i< count;i++)
+      scanf("%d",&number[i]);
+
+    quicksort(number,0,count-1);
+
+    printf("Order of Sorted elements: ");
+    for(i=0;i< count;i++)
+      printf(" %d",number[i]);
+
+    return 0;
+}
+  </pre>
+          </pre>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+  Worst Case Complexity = O(n^2)
+  Best Case Complexity = O(n logn)
+  Average Case Complexity = O(n logn)
+</pre>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=QN9hnmAgmOc" target="_blank">EXPLANATION</a>
+          <br>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="quicksort1.jpg" class="img-fluid" alt="test">
+
+        </div>
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="maxminModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+            <h5>Naive Method Algorithm</h5>
+            <br>
+    Algorithm: Max-Min-Element (numbers[]) 
+    max := numbers[1] 
+    min := numbers[1] 
+
+    for i = 2 to n do 
+      if numbers[i] > max then  
+          max := numbers[i] 
+      if numbers[i] < min then  
+          min := numbers[i] 
+    return (max, min) 
+            <br>
+            <h5>Divide & Conquer Method Algorithm</h5>
+            <br>
+    Algorithm: Max - Min(x, y) 
+    if y – x ≤ 1 then  
+      return (max(numbers[x], numbers[y]), min((numbers[x], numbers[y])) 
+    else 
+      (max1, min1):= maxmin(x, ⌊((x + y)/2)⌋) 
+      (max2, min2):= maxmin(⌊((x + y)/2) + 1)⌋,y) 
+    return (max(max1, max2), min(min1, min2))
+          </pre>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+#include&lt;stdio.h&gt
+#include&lt;stdlib.h&gt 
+int c=0;
+void getMinMax(int arr[], int n, int *max, int *min)
+{
+    int i;
+    if (n == 1)
+    {
+        *max = arr[0];
+        *min = arr[0]; 
+        return;
+    }
+    if (arr[0] > arr[1])
+    {
+        *max = arr[0];
+        *min = arr[1];
+    }
+    else
+    {
+        *max = arr[1];
+        *min = arr[0];
+    }
+    for (i = 2; i < n; i++)
+    {
+        c++;
+        if (arr[i] > *max)
+            *max = arr[i];
+        else if (arr[i] < *min)
+            *min = arr[i];
+    }
+}
+int main()
+{
+    int i, n; 
+    printf("Enter array size: "); 
+    scanf("%d", &n);
+    int *arr = malloc(n * sizeof(int)); 
+    printf("Enter array elements\n"); 
+    for (i = 0; i < n; i++)
+        scanf("%d", (arr + i));	
+    int max = INT_MIN, min = INT_MAX; 
+    getMinMax(arr,n,&max,&min);
+    printf("Minimum element is %d\n", min); 
+    printf("Maximum element is %d\n", max);
+    printf("No of comparison in naive approach %d",c); 
+    return 0;
+}                        
+  </pre>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+ Time Complexity = O(n)
+</pre><br>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=iMKr6Jvp-7U" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="maxmin.JPG" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="matrixchainModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  Take the sequence of matrices and separate it into two subsequences.
+
+  Find the minimum cost of multiplying out each subsequence.
+
+  Add these costs together, and add in the cost of multiplying the two result matrices.
+
+  Do this for each possible position at which the sequence of matrices can be split, and take the minimum over all of them.
+          </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+
+#include&lt;limits.h&gt
+#include&lt;stdio.h&gt
+int MatrixChainOrder(int p[], int n)
+{
+    int m[n][n];
+    int i, j, k, L, q;
+    // cost is zero when multiplying one matrix. the diagonal elements should be zero.
+    for (i = 1; i < n; i++)
+        m[i][i] = 0;
+    // L is chain length. how many matrices is going to be multiplied
+    for (L = 2; L < n; L++) {
+        for (i = 1; i < n - L + 1; i++)
+        {
+            j = i + L - 1;
+            m[i][j] = INT_MAX;
+            for (k = i; k <= j - 1; k++)
+            {
+                // q = cost/scalar multiplications
+                q = m[i][k] + m[k + 1][j]
+                    + p[i - 1] * p[k] * p[j];
+                if (q < m[i][j])
+
+                    m[i][j] = q;
+            }
+        }
+    }
+    return m[1][n - 1];
+}
+int main()
+{
+    int x,size;
+    printf("enter how many elements in the array = ");
+    scanf("%d",&size);
+    int arr[size];
+    printf("enter the elements = \n");
+    for(x=0;x< size;x++)
+        scanf("%d",&arr[x]);
+
+    printf("Minimum number of multiplications is %d ",
+        MatrixChainOrder(arr, size));
+    return 0;
+}                        
+  </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+ Time Complexity = O(n^3)
+</pre><br>
+
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=m092HzUZ6Wc" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="matrixchain1.jpg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="floyedwarshallModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  let dist be a |V| × |V| array of minimum distances initialized to ∞ (infinity)
+  for each edge (u, v) do
+      dist[u][v] ← w(u, v)  // The weight of the edge (u, v)
+  for each vertex v do
+      dist[v][v] ← 0
+  for k from 1 to |V|
+      for i from 1 to |V|
+          for j from 1 to |V|
+              if dist[i][j] > dist[i][k] + dist[k][j] 
+                  dist[i][j] ← dist[i][k] + dist[k][j]
+              end if
+          </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+
+#include&lt;stdio.h&gt
+
+int min(int,int);
+
+void floyds(int p[10][10],int n)
+{
+  int i,j,k;
+  for(k=1;k<=n;k++)
+  for(i=1;i<=n;i++)
+    for(j=1;j<=n;j++)
+    if(i==j)
+      p[i][j]=0;
+    else
+      p[i][j]=min(p[i][j],p[i][k]+p[k][j]);
+}
+
+int min(int a,int b)
+{
+  if(a< b)
+  return(a);
+  else
+  return(b);
+}
+
+void main()
+{
+  int p[10][10],w,n,e,u,v,i,j;;
+  printf("Enter the number of vertices: ");
+  scanf("%d",&n);
+  printf("\nEnter the number of edges: ");
+  scanf("%d",&e);
+  
+  for(i=1;i<=n;i++)
+  {
+  for(j=1;j<=n;j++)
+    p[i][j]=999;
+  }
+  for(i=1;i<=e;i++)
+  {
+  printf("\nEnter the end vertices of edge%d with its weight \n",i);
+  scanf("%d%d%d",&u,&v,&w);
+  p[u][v]=w;
+  }
+  printf("\n Matrix of input data:\n");
+  for(i=1;i<=n;i++)
+  {
+  for(j=1;j<=n;j++)
+    printf("%d \t",p[i][j]);
+  printf("\n");
+  }
+  floyds(p,n);
+  printf("\n Transitive closure:\n");
+  for(i=1;i<=n;i++)
+  {
+  for(j=1;j<=n;j++)
+    printf("%d \t",p[i][j]);
+  printf("\n");
+  }
+  printf("\n The shortest paths are:\n");
+  for(i=1;i<=n;i++)
+  for(j=1;j<=n;j++)
+  {
+    if(i!=j)
+    printf("\n <%d,%d>=%d",i,j,p[i][j]);
+  }
+}          
+  </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+ Time Complexity = O(V^3), where V is the number of vertex.
+</pre><br>
+
+          <br>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=Gc4mWrmJBsw" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="floyed1.jpg" class="img-fluid" alt="test"><br><br>
+          <img src="floyed2.jpg" class="img-fluid" alt="test"><br><br>
+          <img src="floyed3.jpg" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="travelingModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  Algorithm: Traveling-Salesman-Problem 
+  C ({1}, 1) = 0 
+  for s = 2 to n do 
+    for all subsets S Є {1, 2, 3, … , n} of size s and containing 1 
+        C (S, 1) = ∞ 
+    for all j Є S and j ≠ 1 
+        C (S, j) = min {C (S – {j}, i) + d(i, j) for i Є S and i ≠ j} 
+  Return minj C ({1, 2, 3, …, n}, j) + d(j, i) 
+          </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+#include&lt;stdio.h&gt
+
+int ary[10][10],completed[10],n,cost=0;
+  
+void takeInput()
+{
+  int i,j;
+  
+  printf("Enter the number of nodes: ");
+  scanf("%d",&n);
+  
+  printf("\nEnter the Cost Matrix\n");
+  
+  for(i=0;i < n;i++)
+  {
+    for( j=0;j < n;j++)
+      scanf("%d",&ary[i][j]);
+  
+    completed[i]=0;
+  }
+  
+  printf("\n\nThe cost list is:");
+  
+  for( i=0;i < n;i++)
+  {
+    printf("\n");
+  
+    for(j=0;j < n;j++)
+      printf("\t%d",ary[i][j]);
+  }
+}
+  
+void mincost(int city)
+{
+  int i,ncity;
+  
+  completed[city]=1;
+  
+  printf("%d--->",city+1);
+  ncity=least(city);
+  
+  if(ncity==999)
+  {
+    ncity=0;
+    printf("%d",ncity+1);
+    cost+=ary[city][ncity];
+  
+    return;
+  }
+  
+  mincost(ncity);
+}
+  
+int least(int c)
+{
+  int i,nc=999;
+  int min=999,kmin;
+  
+  for(i=0;i < n;i++)
+  {
+    if((ary[c][i]!=0)&&(completed[i]==0))
+      if(ary[c][i]+ary[i][c] < min)
+      {
+        min=ary[i][0]+ary[c][i];
+        kmin=ary[c][i];
+        nc=i;
+      }
+  }
+  
+  if(min!=999)
+    cost+=kmin;
+  
+  return nc;
+}
+  
+int main()
+{
+  takeInput();
+  
+  printf("\n\nThe Path is:\n");
+  mincost(0); //passing 0 because starting vertex
+  
+  printf("\n\nMinimum cost is %d\n ",cost);
+  
+  return 0;
+}
+ </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+ Time Complexity = O(n^2*2^n)
+</pre><br>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=hh-uFQ-MGfw" target="_blank">EXPLANATION</a>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="tsp.jpg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="knapsackModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  Algorithm: Greedy-Fractional-Knapsack (w[1..n], p[1..n], W) 
+  for i = 1 to n 
+    do x[i] = 0 
+  weight = 0 
+  for i = 1 to n 
+    if weight + w[i] ≤ W then  
+        x[i] = 1 
+        weight = weight + w[i] 
+    else 
+        x[i] = (W - weight) / w[i] 
+        weight = W 
+        break 
+  return x
+          </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+  #include &lt;stdio.h&gt
+
+    void main()
+    {
+    int capacity, no_items, cur_weight, item;
+    int used[10];
+    float total_profit;
+    int i;
+    int weight[10];
+    int value[10];
+    
+    printf("Enter the capacity of knapsack:\n");
+    scanf("%d", &capacity);
+    
+    printf("Enter the number of items:\n");
+    scanf("%d", &no_items);
+    
+    printf("Enter the weight and value of %d item:\n", no_items);
+    for (i = 0; i < no_items; i++)
+    {
+    printf("Weight[%d]:\t", i);
+    scanf("%d", &weight[i]);
+    printf("Value[%d]:\t", i);
+    scanf("%d", &value[i]);
+    }
+    
+    for (i = 0; i < no_items; ++i)
+    used[i] = 0;
+    
+    cur_weight = capacity;
+    while (cur_weight > 0)
+    {
+    item = -1;
+    for (i = 0; i < no_items; ++i)
+    if ((used[i] == 0) &&
+    ((item == -1) || ((float) value[i] / weight[i] > (float) value[item] / weight[item])))
+    item = i;
+    
+    used[item] = 1;
+    cur_weight -= weight[item];
+    total_profit += value[item];
+    if (cur_weight >= 0)
+    printf("Added object %d (%d Rs.,%dKg) completely in the bag.Space left: %d.\n", item + 1,value[item],weight[item],cur_weight);
+    else
+    {
+    int item_percent = (int) ((1 + (float) cur_weight / weight[item]) * 100);
+    printf("Added %d%% (%d Rs., %dKg) of object %d in the bag.\n", item_percent, value[item], weight[item], item + 1);
+    total_profit -= value[item];
+    total_profit += (1 + (float)cur_weight / weight[item]) * value[item];
+    }
+    }
+    printf("Filled the bag with objects worth %.2f Rs.\n", total_profit);
+    }
+              
+            </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+ Time Complexity = O(n logn)
+</pre><br>
+
+
+          <br>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=xZfmHVi7FMg" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="knapsack.jpg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="kruskalModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  Begin
+
+  Create the edge list of given graph, with their weights.
+
+  Sort the edge list according to their weights in ascending order.
+
+  Draw all the nodes to create skeleton for spanning tree.
+
+  Pick up the edge at the top of the edge list (i.e. edge with minimum weight).
+
+  Remove this edge from the edge list.
+
+  Connect the vertices in the skeleton with given edge. If by connecting the vertices, a cycle is created in the skeleton, then discard this edge.
+
+  Repeat steps 5 to 7, until n-1 edges are added or list of edges is over.
+
+  Return 
+          </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+#include&lt;stdio.h&gt
+#include&lt;conio.h&gt
+&lt;stdlib.h&gt
+int i,j,k,a,b,u,v,n,ne=1;
+int min,mincost=0,cost[9][9],parent[9];
+int find(int);
+int uni(int,int);
+void main()
+{
+  clrscr();
+  printf("\n\tImplementation of Kruskal's algorithm\n");
+  printf("\nEnter the no. of vertices:");
+  scanf("%d",&n);
+  printf("\nEnter the cost adjacency matrix:\n");
+  for(i=1;i<=n;i++)
+  {
+    for(j=1;j<=n;j++)
+    {
+      scanf("%d",&cost[i][j]);
+      if(cost[i][j]==0)
+        cost[i][j]=999;
+    }
+  }
+  printf("The edges of Minimum Cost Spanning Tree are\n");
+  while(ne < n)
+  {
+    for(i=1,min=999;i<=n;i++)
+    {
+      for(j=1;j <= n;j++)
+      {
+        if(cost[i][j] < min)
+        {
+          min=cost[i][j];
+          a=u=i;
+          b=v=j;
+        }
+      }
+    }
+    u=find(u);
+    v=find(v);
+    if(uni(u,v))
+    {
+      printf("%d edge (%d,%d) =%d\n",ne++,a,b,min);
+      mincost +=min;
+    }
+    cost[a][b]=cost[b][a]=999;
+  }
+  printf("\n\tMinimum cost = %d\n",mincost);
+  getch();
+}
+int find(int i)
+{
+  while(parent[i])
+  i=parent[i];
+  return i;
+}
+int uni(int i,int j)
+{
+  if(i!=j)
+  {
+    parent[j]=i;
+    return 1;
+  }
+  return 0;
+}
+</pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+Time Complexity = O(E logE),  where E is the number of edges in the graph
+</pre><br>
+
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=4ZlRH0eK-qQ" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="kruskal.jpg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="primModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+Step 1: Select a starting vertex
+
+Step 2: Repeat Steps 3 and 4 until there are fringe vertices
+
+Step 3: Select an edge e connecting the tree vertex and fringe vertex that has minimum weight
+
+Step 4: Add the selected edge and the vertex to the minimum spanning tree T
+
+[END OF LOOP]
+
+Step 5: EXIT
+          </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+
+#include &lt;stdio.h&gt
+#include&lt;limits.h&gt
+int parent[9];
+int unique(int i,int j)
+{
+  if(i!=j)
+  {
+    parent[j]=i;
+    return 1;
+  }
+  return 0;
+}
+int find_parent(int i)
+{
+  while(parent[i])
+  {
+    i=parent[i];
+  }
+  return i;
+}
+int main()
+{
+  int i,j,k,a,b,u,v,ne=1,n;
+  printf("\nEnter the no. of vertices:");
+  scanf("%d",&n);
+  int min,mincost=0,cost[n][n];
+  printf("\nEnter the cost adjacency matrix:\n");
+  for(i=1;i<=n;i++)
+  {
+    for(j=1;j<=n;j++)
+    {
+      scanf("%d",&cost[i][j]);
+    }
+  }
+  printf("The edges of Minimum Cost Spanning Tree are: \n");
+  while(ne < n)
+  {
+    for(i=1,min=999;i<=n;i++)
+    {
+      for(j=1;j <= n;j++)
+      {
+        if(cost[i][j] < min)
+        {
+          min=cost[i][j];
+          a=u=i;
+          b=v=j;
+        }
+      }
+    }
+    u=find_parent(u);
+    v=find_parent(v);
+    if(unique(u,v))
+    {
+      printf("%d edge (%d,%d) =%d\n",ne++,a,b,min);
+      mincost +=min;
+    }
+    cost[a][b]=cost[b][a]=999;
+  }
+  printf("\n\tMinimum cost = %d\n",mincost);
+}
+</pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+Time Complexity = O(E logV), where E and V is the number of edges and vertices in the graph.
+</pre><br>
+
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=4ZlRH0eK-qQ" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="prim.jpg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="dijsktraModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+        function dijkstra(G, S)
+  for each vertex V in G
+      distance[V] <- infinite
+      previous[V] <- NULL
+      If V != S, add V to Priority Queue Q
+  distance[S] <- 0
+
+  while Q IS NOT EMPTY
+      U <- Extract MIN from Q
+      for each unvisited neighbour V of U
+          tempDistance <- distance[U] + edge_weight(U, V)
+          if tempDistance < distance[V]
+              distance[V] <- tempDistance
+              previous[V] <- U
+  return distance[], previous[]
+</pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+
+
+#include &lt;stdio.h&gt
+#define INFINITY 9999
+#define MAX 10
+
+void Dijkstra(int Graph[MAX][MAX], int n, int start);
+
+void Dijkstra(int Graph[MAX][MAX], int n, int start) {
+  int cost[MAX][MAX], distance[MAX], pred[MAX];
+  int visited[MAX], count, mindistance, nextnode, i, j;
+
+  
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
+      if (Graph[i][j] == 0)
+        cost[i][j] = INFINITY;
+      else
+        cost[i][j] = Graph[i][j];
+
+  for (i = 0; i < n; i++) {
+    distance[i] = cost[start][i];
+    pred[i] = start;
+    visited[i] = 0;
+  }
+
+  distance[start] = 0;
+  visited[start] = 1;
+  count = 1;
+
+  while (count < n - 1) {
+    mindistance = INFINITY;
+
+    for (i = 0; i < n; i++)
+      if (distance[i] < mindistance && !visited[i]) {
+        mindistance = distance[i];
+        nextnode = i;
+      }
+
+    visited[nextnode] = 1;
+    for (i = 0; i < n; i++)
+      if (!visited[i])
+        if (mindistance + cost[nextnode][i] < distance[i]) {
+          distance[i] = mindistance + cost[nextnode][i];
+          pred[i] = nextnode;
+        }
+    count++;
+  }
+
+  
+  for (i = 0; i < n; i++)
+    if (i != start) {
+      printf("\nDistance from source to %d: %d", i, distance[i]);
+    }
+}
+int main() {
+  int Graph[MAX][MAX], i, j, n, u;
+  printf("The number of elements\n");
+  scanf("%d",&n);
+  printf("Enter the weights of matrix elements");
+  for (i=0;i< n;i++){
+    for(j=0;j< n;j++){
+      scanf("%d",&Graph[i][j]);
+    }
+  }
+  u = 0;
+  Dijkstra(Graph, n, u);
+
+  return 0;
+}
+</pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">Time Complexity</h4>
+          <br>
+          <pre>The Time Complexity = O(E logV), where E,V are the number of edges, and vertices.</pre>
+          <br>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=smHnz2RHJBY" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="dijsktra.jpg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="jobsequenceModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  Algorithm: Job-Sequencing-With-Deadline (D, J, n, k) 
+  D(0) := J(0) := 0 
+  k := 1 
+  J(1) := 1   // means first job is selected 
+  for i = 2 … n do 
+    r := k 
+    while D(J(r)) > D(i) and D(J(r)) ≠ r do 
+        r := r – 1 
+    if D(J(r)) ≤ D(i) and D(i) > r then 
+        for l = k … r + 1 by -1 do 
+          J(l + 1) := J(l) 
+          J(r + 1) := i 
+          k := k + 1 
+        </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+
+#include &lt;stdio.h&gt
+
+#define MAX 100
+
+typedef struct Job {
+  char id[5];
+  int deadline;
+  int profit;
+} Job;
+
+void jobSequencingWithDeadline(Job jobs[], int n);
+
+int minValue(int x, int y) {
+  if(x < y) return x;
+  return y;
+}
+
+int main(void) {
+  //variables
+  int i, j;
+
+  //jobs with deadline and profit
+  Job jobs[5] = {
+    {"j1", 2,  60},
+    {"j2", 1, 100},
+    {"j3", 3,  20},
+    {"j4", 2,  40},
+    {"j5", 1,  20},
+  };
+
+  //temp
+  Job temp;
+
+  //number of jobs
+  int n = 5;
+
+  //sort the jobs profit wise in descending order
+  for(i = 1; i < n; i++) {
+    for(j = 0; j < n - i; j++) {
+      if(jobs[j+1].profit > jobs[j].profit) {
+        temp = jobs[j+1];
+        jobs[j+1] = jobs[j];
+        jobs[j] = temp;
+      }
+    }
+  }
+
+  printf("%10s %10s %10s\n", "Job", "Deadline", "Profit");
+  for(i = 0; i < n; i++) {
+    printf("%10s %10i %10i\n", jobs[i].id, jobs[i].deadline, jobs[i].profit);
+  }
+
+  jobSequencingWithDeadline(jobs, n);
+
+  return 0;
+}
+
+void jobSequencingWithDeadline(Job jobs[], int n) {
+  //variables
+  int i, j, k, maxprofit;
+
+  //free time slots
+  int timeslot[MAX];
+
+  //filled time slots
+  int filledTimeSlot = 0;
+
+  //find max deadline value
+  int dmax = 0;
+  for(i = 0; i < n; i++) {
+    if(jobs[i].deadline > dmax) {
+      dmax = jobs[i].deadline;
+    }
+  }
+
+  //free time slots initially set to -1 [-1 denotes EMPTY]
+  for(i = 1; i <= dmax; i++) {
+    timeslot[i] = -1;
+  }
+
+  printf("dmax: %d\n", dmax);
+
+  for(i = 1; i <= n; i++) {
+    k = minValue(dmax, jobs[i - 1].deadline);
+    while(k >= 1) {
+      if(timeslot[k] == -1) {
+        timeslot[k] = i-1;
+        filledTimeSlot++;
+        break;
+      }
+      k--;
+    }
+
+    //if all time slots are filled then stop
+    if(filledTimeSlot == dmax) {
+      break;
+    }
+  }
+
+  //required jobs
+  printf("\nRequired Jobs: ");
+  for(i = 1; i <= dmax; i++) {
+    printf("%s", jobs[timeslot[i]].id);
+
+    if(i < dmax) {
+      printf(" --> ");
+    }
+  }
+
+  //required profit
+  maxprofit = 0;
+  for(i = 1; i <= dmax; i++) {
+    maxprofit += jobs[timeslot[i]].profit;
+  }
+  printf("\nMax Profit: %d\n", maxprofit);
+} </pre>
+          <br>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+Time Complexity = O(n^2)
+</pre><br>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=M7Fl_z7_J2k" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="job.jpg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="puzzleModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+          <h5>Cost Function</h5>
+
+          c(x) = f(x) + h(x) where, 
+
+          f(x) is the length of the path from root to x 
+                (the number of moves so far) and
+
+          h(x) is the number of non-blank tiles not in 
+                their goal position (the number of mis-
+                -placed tiles). There are at least h(x) 
+                moves to transform state x to a goal state  
+                
+        <h5>Algorithm</h5>
+
+/* Algorithm LCSearch uses c(x) to find an answer node
+  * LCSearch uses Least() and Add() to maintain the list 
+  of live nodes
+  * Least() finds a live node with least c(x), deletes
+  it from the list and returns it
+  * Add(x) adds x to the list of live nodes
+  * Implement list of live nodes as a min-heap */
+
+  struct list_node
+  {
+  list_node *next;
+
+  // Helps in tracing path when answer is found
+  list_node *parent; 
+  float cost;
+  } 
+
+  algorithm LCSearch(list_node *t)
+  {
+  // Search t for an answer node
+  // Input: Root node of tree t
+  // Output: Path from answer node to root
+  if (*t is an answer node)
+  {
+      print(*t);
+      return;
+  }
+
+  E = t; // E-node
+
+  Initialize the list of live nodes to be empty;
+  while (true)
+  {
+    for each child x of E
+    {
+        if x is an answer node
+        {
+            print the path from x to t;
+            return;
+        }
+        Add (x); // Add x to list of live nodes;
+        x->parent = E; // Pointer for path to root
+    }
+
+    if there are no more live nodes
+    {
+        print ("No answer node");
+        return;
+    }
+      
+    // Find a live node with least estimated cost
+    E = Least(); 
+
+    // The found node is deleted from the list of 
+    // live nodes
+  }
+  }
+        </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+#include&lt;stdio.h&gt
+int m=0,n=4;
+int cal(int temp[10][10],int t[10][10])
+{
+  int i,j,m=0;
+  for(i=0;i < n;i++)
+    for(j=0;j < n;j++)
+    {
+      if(temp[i][j]!=t[i][j])
+      m++;
+    }
+  return m;
+}
+int check(int a[10][10],int t[10][10])
+{
+  int i,j,f=1;
+  for(i=0;i < n;i++)
+    for(j=0;j < n;j++)
+      if(a[i][j]!=t[i][j])
+        f=0;
+  return f;
+}
+void main()
+{
+  int p,i,j,n=4,a[10][10],t[10][10],temp[10][10],r[10][10];
+  int m=0,x=0,y=0,d=9999,dmin=0,l=0;
+
+  printf("\nEnter the matrix to be solved,space with zero :\n");
+  for(i=0;i < n;i++)
+    for(j=0;j < n;j++)
+      scanf("%d",&a[i][j]);
+
+  printf("\nEnter the target matrix,space with zero :\n");
+  for(i=0;i < n;i++)
+    for(j=0;j < n;j++)
+      scanf("%d",&t[i][j]);
+
+  printf("\nEntered Matrix is :\n");
+  for(i=0;i < n;i++)
+  {
+    for(j=0;j < n;j++)
+      printf("%d\t",a[i][j]);
+    printf("\n");
+  }
+
+  printf("\nTarget Matrix is :\n");
+  for(i=0;i < n;i++)
+  {
+    for(j=0;j < n;j++)
+      printf("%d\t",t[i][j]);
+    printf("\n");
+  }
+
+  while(!(check(a,t)))
+  {
+    l++;
+    d=9999;
+    for(i=0;i < n;i++)
+      for(j=0;j < n;j++)
+      {
+        if(a[i][j]==0)
+        {
+          x=i;
+          y=j;
+        }
+      }
+
+    //To move upwards
+    for(i=0;i < n;i++)
+      for(j=0;j < n;j++)
+        temp[i][j]=a[i][j];
+
+    if(x!=0)
+    {
+      p=temp[x][y];
+      temp[x][y]=temp[x-1][y];
+      temp[x-1][y]=p;
+    }
+    m=cal(temp,t);
+    dmin=l+m;  // c(x) = f(x) + g(x)
+    if(dmin < d)
+    {
+      d=dmin;
+      for(i=0;i < n;i++)
+        for(j=0;j < n;j++)
+          r[i][j]=temp[i][j];
+    }
+
+    //To move downwards
+    for(i=0;i < n;i++)
+      for(j=0;j < n;j++)
+        temp[i][j]=a[i][j];
+    if(x!=n-1)
+    {
+      p=temp[x][y];
+      temp[x][y]=temp[x+1][y];
+      temp[x+1][y]=p;
+    }
+    m=cal(temp,t);
+    dmin=l+m;
+    if(dmin < d)
+    {
+      d=dmin;
+      for(i=0;i < n;i++)
+        for(j=0;j < n;j++)
+          r[i][j]=temp[i][j];
+    }
+
+    //To move right side
+    for(i=0;i < n;i++)
+      for(j=0;j < n;j++)
+        temp[i][j]=a[i][j];
+    if(y!=n-1)
+    {
+      p=temp[x][y];
+      temp[x][y]=temp[x][y+1];
+      temp[x][y+1]=p;
+    }
+    m=cal(temp,t);
+    dmin=l+m;
+    if(dmin < d)
+    {
+      d=dmin;
+      for(i=0;i < n;i++)
+        for(j=0;j < n;j++)
+          r[i][j]=temp[i][j];
+    }
+
+    //To move left
+    for(i=0;i < n;i++)
+      for(j=0;j < n;j++)
+        temp[i][j]=a[i][j];
+    if(y!=0)
+    {
+      p=temp[x][y];
+      temp[x][y]=temp[x][y-1];
+      temp[x][y-1]=p;
+    }
+    m=cal(temp,t);
+    dmin=l+m;
+    if(dmin < d)
+    {
+      d=dmin;
+      for(i=0;i < n;i++)
+        for(j=0;j < n;j++)
+          r[i][j]=temp[i][j];
+    }
+
+    printf("\nCalculated Intermediate Matrix Value :\n");
+    for(i=0;i < n;i++)
+    {
+      for(j=0;j < n;j++)
+        printf("%d\t",r[i][j]);
+      printf("\n");
+    }
+    for(i=0;i < n;i++)
+      for(j=0;j < n;j++)
+      {
+        a[i][j]=r[i][j];
+        temp[i][j]=0;
+      }
+    printf("Minimum cost : %d\n",d);
+  }
+
+}
+</pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+Time Complexity = O(n^2)
+</pre><br>
+
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=7Uo4azT1d9E" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="15puzzle1.jpeg" class="img-fluid" alt="test"><br>
+          <br>
+          <img src="15puzzle2.jpeg" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="nqueenModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          1) Start in the leftmost column
+
+          2) If all queens are placed
+          return true
+          3) Try all rows in the current column.
+          Do following for every tried row.
+          a) If the queen can be placed safely in this row then mark this [row, column] as part of the
+          solution and recursively check if placing
+          queen here leads to a solution.
+
+          b) If placing the queen in [row, column] leads to a solution then return true.
+
+          c) If placing queen doesn't lead to a solution then unmark this [row, column] (Backtrack) and go to step (a)
+          to try other rows.
+
+          4) If all rows have been tried and nothing worked,
+          return false to trigger backtracking.
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+#include&lt;stdio.h&gt
+#include&lt;math.h&gt
+int a[30],count=0;
+int killing(int pos) {
+  int i;
+  for (i=1;i< pos;i++) { //from 1st row to the (current row -1) to check
+    if((a[i]==a[pos])||((abs(a[i]-a[pos])==abs(i-pos))))
+        return 0;
+  }
+  return 1;
+}
+void print_sol(int n) {
+  int i,j;
+  count++;
+  printf("\n\nSolution number = %d:\n",count);
+  printf("\n");
+  for (i=1;i<=n;i++) {
+    for (j=1;j<=n;j++) {
+      if(a[i]==j)// if the column number == the current column
+          printf("Queen\t"); else
+          printf("-\t");
+    }
+    printf("\n");
+  }
+}
+void N_queen(int n) {
+  int k=1; // 1st queen
+  a[k]=0;  // column for queens
+  while(k!=0) {
+    a[k]=a[k]+1; // 1st queen at the first place
+    while((a[k]<=n) && !killing(k))
+        a[k]++;
+    if(a[k]<=n) {
+      if(k==n)
+          print_sol(n); else {
+        k++;
+        a[k]=0;
+      }
+    } else
+        k--;
+  }
+}
+void main() {
+  int i,n;
+  printf("Enter the number of Queens\n");
+  scanf("%d",&n);
+  N_queen(n);
+  printf("\nTotal solutions=%d",count);
+}                         
+  </pre>
+          <br>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+Time Complexity = O(n^n), where n is the width of the board.
+</pre><br>
+
+          <br>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=xFv_Hl4B83A" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="nqueen.jpeg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="graphcolouringModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  The steps required to color a graph G with n number of vertices are as follows −
+
+  Step 1 − Arrange the vertices of the graph in some order.
+
+  Step 2 − Choose the first vertex and color it with the first color.
+
+  Step 3 − Choose the next vertex and color it with the lowest numbered color that has not been colored on any vertices adjacent to it.If all the adjacent vertices are colored with this color,  <br>assign a new color to it. Repeat this step until all the vertices are colored.
+  </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+
+#include&lt;stdio.h&gt
+void gc()
+{
+int n;
+  printf("Please enter the number of nodes:");
+  scanf("%d",&n);
+  printf("Please enter the adjacency matrix:\n");
+for(int i=0;i< n;i++)
+printf("%3d",i+1);
+printf("\n");
+int a[n][n];
+for(int i=0;i< n;i++)        //The adjacency matrix stores graph information 
+{
+  printf("%-2d",i+1);
+  for(int j=0;j< n;j++)
+  {
+    scanf("%d",&a[i][j]);
+  }
+getchar();
+}
+int m;
+printf("Please enter the number of colors:");
+scanf("%d",&m);
+int result[n];                   //Store the coloring of each vertex 
+for(int i=0;i< n;i++)
+result[i]=0;
+result[0]=1;               
+int k=1;
+while(k>-1)
+{
+  result[k]++;
+  while(result[k]<=m)
+  {
+    int flag=0;
+    for(int j=0;j< k;j++)         //Traverse the colored vertices and determine whether the constraints are met 
+    {
+      if(a[k][j]==1&&result[k]==result[j])
+      flag=1;
+  }
+  if(flag==0)
+  break;
+  else
+  result[k]++;
+  }
+    if(result[k]<=m)
+    {
+      if(k==n-1)                   //The last vertex is successfully colored and jumps out of the loop 
+      break;
+      else 
+      k++;                         //Continue to color the vertices 
+  }
+  else
+  {
+  result[k]=0;
+    k--;	                         //The vertex does not meet the constraints of coloring, backtracking 
+  }
+    
+}
+if(k==-1)
+printf("No solution");
+else
+{ 
+      printf("One solution to the problem of graph coloring is:\n");
+  for(int i=0;i< n;i++)
+  printf("Node %d color number: %d\n",i+1,result[i]);
+  } 
+} 
+main()
+{
+  gc();
+}                      
+  </pre>
+
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">Time Complexity</h4>
+          <br>
+          <pre>
+                  Time Complexity = O(m^V), m= number of different colors, V = number of Vertices
+                </pre>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=052VkKhIaQ4" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="graph1.jpg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="dfsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  A standard DFS implementation puts each vertex of the graph into one of two categories:
+  1. Visited
+  2. Not Visited
+  The purpose of the algorithm is to mark each vertex as visited while avoiding cycles.
+
+  The DFS algorithm works as follows:
+
+  1. Start by putting any one of the graph's vertices on top of a stack.
+
+  2. Take the top item of the stack and add it to the visited list.
+
+  3. Create a list of that vertex's adjacent nodes. Add the ones which aren't in the visited list to the top of the stack.
+
+  4. Keep repeating steps 2 and 3 until the stack is empty.
+</pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+#include&lt;stdio.h&gt
+#define MAX 20
+void push(int Q[],int *t, int num)
+{
+  *t=*t+1;
+  Q[*t]=num;
+}
+int pop(int Q[], int *t)
+{
+  // Assume there is no underflow situation
+  int d=Q[*t];
+  *t=*t-1;
+  return d;
+    
+}
+
+void main()
+{
+  
+  int n,i,j,t=-1,num,k,pos;
+  int Q[MAX];
+  int a[MAX][MAX],status[MAX];
+  printf("Enter No. of Nodes : ");
+  scanf("%d",&n);
+  for(i=0;i< n;i++)
+  {
+    printf("\n Enter for Node %c : ",i+65);
+    for(j=0;j< n;j++)
+    {
+      scanf("%d",&a[i][j]);
+    }
+  }
+  for(i=0;i< n;i++)
+    status[i]=0;// initilaize with ready state
+    
+  status[0]=1; // running state
+  num=0;
+  k=1;
+  push(Q,&t,num); // first time
+  while(k<=n)
+  {
+    
+    pos=pop(Q,&t);
+    printf(" %c",pos+65);
+    status[pos]=2;
+    for(j=0;j< n;j++)
+    {
+      if(a[pos][j]==1 && status[j]==0)// first check neighbour second check tready state
+      {
+        status[j]=1; // running state
+        push(Q,&t,j);
+      }
+    }
+  
+    k++;
+  }
+}
+</pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+Time Complexity = O(V + E), where V and E are the vertice and the edges in the graph.
+</pre><br>
+
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=pcKY4hjDrxk" target="_blank">EXPLANATION</a>
+          <br>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="dfs.jpg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="bfsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-fullscreen">
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header" style="background-color:#ccffdd;">
+          <button type="button" class="close" data-dismiss="modal" style="background-color: #ccffdd;">&times;</button>
+          <h4 class="modal-title px-3 me-5 border border-success rounded-pill" style="color: green;">Code-O-Mania</h4>
+        </div>
+        <div class="modal-body" style="background-color:white;">
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">ALGORITHM</h4>
+          <br>
+          <pre>
+  A standard BFS implementation puts each vertex of the graph into one of two categories:
+
+  1. Visited
+  2. Not Visited
+  The purpose of the algorithm is to mark each vertex as visited while avoiding cycles.
+
+  The algorithm works as follows:
+
+  1.Start by putting any one of the graph's vertices at the back of a queue.
+  2. Take the front item of the queue and add it to the visited list.
+  3. Create a list of that vertex's adjacent nodes. Add the ones which aren't in the visited list to the back of the queue.
+  4. Keep repeating steps 2 and 3 until the queue is empty.
+  The graph might have two different disconnected parts so to make sure that we cover every vertex, we can also run the BFS algorithm on every node
+
+          </pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">CODE</h4>
+          <br>
+          <pre style="color:black" id="myInput" type="text">
+#include&lt;stdio.h&gt
+#define MAX 15
+void Insert(int Q[], int *f, int *r, int num)
+{
+  if(*r==-1)// empty list
+  {
+    *r=0;
+    *f=0;
+    Q[*r]=num;
+  }
+  else
+  {
+    *r=*r+1;
+    Q[*r]=num;
+  }
+}
+int Delete(int q[], int *f, int *r)
+{
+  int num=q[*f];
+  if(*f==*r)// single element
+  {
+    *f=-1;
+    *r=-1;
+  }
+  else
+  {
+    *f=*f+1;
+  }
+  return num;
+}
+void main()
+{
+  int a[MAX][MAX],status[MAX],Q[MAX];
+  int f=-1,r=-1;// initilaize
+  int n,i,j,num,k,p;
+  printf("\n Enter No. of nodes : ");
+  scanf("%d",&n);
+  for(i=0;i< n;i++)
+  {
+    printf("\n Enter data for Node %c : ",i+65);
+    for(j=0;j< n;j++)
+    {
+      scanf("%d",&a[i][j]);// 1 for neighbour 0 for nothing
+    }
+  }
+  
+  for(i=0;i< n;i++)
+    status[i]=0 ;// initialize
+    
+  num=0;
+  status[0]=1;// for insertion in Queue
+  Insert(Q,&f,&r,num);
+  k=1;
+  while(k<=n)
+  {
+    p=Delete(Q,&f,&r);
+    printf(" %c",p+65);
+    status[p]=2;// processed
+    
+    for(j=0;j< n;j++)
+    {
+      if(a[p][j]==1 && status[j]==0)
+      {
+        Insert(Q,&f,&r,j);
+        status[j]=1;
+      }
+    }
+    k++;
+  }
+}
+</pre>
+          <br>
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">TIME COMPLEXITY</h4>
+          <pre>
+ Time Complexity = O(V + E), where V and E is the number of vertices and edges.</pre><br>
+          <br>
+          <a style="font-family: 'Black Han Sans', sans-serif; text-decoration:none; font-size:22px"
+            href="https://www.youtube.com/watch?v=pcKY4hjDrxk" target="_blank">EXPLANATION</a>
+          <br>
+
+          <h4 style="font-family: 'Black Han Sans', sans-serif;">OUTPUT</h4>
+
+          <img src="bfs.jpg" height="500" width="500" class="img-fluid" alt="test">
+
+        </div>
+
+        <div class="modal-footer" style="background-color: black; ">
+          <button type="button" class="btn btn-sm btn-light  me-5" data-dismiss="modal"
+            style="background-color: white;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: black;">
+    <footer class="pt-4  border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="facebook.png" alt="" width="25" height="25" style="margin-left: 5px;">
+          <img class="mb-2" src="twitter.png" alt="" width="25" height="25" style="margin-left: 5px;">
+          <img class="mb-2" src="linkedin.png" alt="" width="25" height="25" style="margin-left: 5px;">
+          <img class="mb-2" src="instagram.png" alt="" width="25" height="25" style="margin-left: 5px;">
+          <img class="mb-2" src="gmail.png" alt="" width="25" height="25" style="margin-left: 5px;">
+
+          <small class="d-block mb-3 text" style="color: white;">Follow Us Social Media</small>
+        </div>
+        <div class="col-6 col-md">
+          <h4 style="color: white;">Sayon Islam</h4>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="http://sayon-islam-23.c1.biz/"
+                style="color:white" target="_blank">Website</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none"
+                href="https://www.facebook.com/sayon.islam.23" style="color:white" target="_blank">Facebook</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://twitter.com/PetrolheadK?s=09"
+                style="color:white" target="_blank">Twitter</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none"
+                href="https://www.linkedin.com/in/sayon-islam-9732071ab" style="color:white"
+                target="_blank">Linkedin</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none"
+                href="https://instagram.com/forbidden_voices_23?utm_medium=copy_link" style="color:white"
+                target="_blank">Instagram</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="mailto:sayonislam.2000@gmail.com"
+                style="color:white">Gmail</a></li>
+
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h4 style="color: white;">Antara Ghosh</h4>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none"
+                href="https://www.facebook.com/profile.php?id=100047214579363" style="color:white"
+                target="_blank">Facebook</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#" style="color:white"
+                target="_blank">Linkedin</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none"
+                href="https://instagram.com/__miss_antara___?utm_medium=copy_link" style="color:white"
+                target="_blank">Instagram</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#" style="color:white"
+                target="_blank">Gmail</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <style>
+    pre {
+      height: auto;
+      max-height: 500px;
+      overflow: auto;
+      overflow-y: auto;
+      background-color: #eeeeee;
+    }
+  </style>
+
+  <script src="jquery.min.js"></script>
+  <script src="e-search.min.js"></script>
+  <script>
+    $('.form-control me-2').search({
+      //tereach
+    });
+  </script>
+
+  <!-- Full screen modal -->
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity></script>
+</body>
+
+</html>
